@@ -1,8 +1,56 @@
-# node-js-getting-started
+# Lenlet Zillow API
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
 
-This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+This application implements a simple forwarding mechanism for the [Zillow API](https://www.zillow.com/howto/api/APIOverview.htm). It does three main tasks:
+
+1. All incoming requests are accepted by the server, regardless of origin.
+2. All valid Zillow API requests are forward to the Zillow API.
+3. All responses are converted from XML to valid JSON responses.
+
+## Using the API
+
+The API is an exact replica of the Zillow API (as it just forwards requests). Currently supported endpoints for forwarding are:
+
+```javascript
+var supportedEndpoints = [
+	GetDeepSearchResults, 
+  GetUpdatedPropertyDetails, 
+  GetDeepComps, 
+  GetRateSummary, 
+  GetMonthlyPayments, 
+  GetDemographics, 
+  GetRegionChildren, 
+  GetRegionChart, 
+  GetSearchResults, 
+  GetZestimate, 
+  GetChart, 
+  GetComps,
+ ]
+```
+The endpoints correspond to those described in the [Zillow API](https://www.zillow.com/howto/api/APIOverview.htm).
+
+Endpoints should be reached by making a request to:
+```
+https://lenslet.herokuapp.com/api/<ENDPOINT>?param1=<VALUE1>&param2=<VALUE2>
+```
+
+## Example
+
+For example, from a front-end client the following will do a search on the Zillow API:
+
+```javascript
+const req = new XMLHttpRequest();
+const url="https://lenslet.herokuapp.com/api/GetSearchResults?address=2114+Bigelow+Ave&citystatezip=Seattle%2C+WA";
+req.open("GET", url);
+req.onreadystatechange=(e)=>{
+	// For some reason, throws an unexpected end of data error.
+	const result = JSON.parse(this.responseText)
+	// We have the JSON result available for use here.
+	console.log(result)
+}
+req.send();
+```
 
 ## Running Locally
 
