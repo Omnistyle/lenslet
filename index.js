@@ -32,10 +32,11 @@ app.get('/api/:endpoint', (req, res) => {
 			'availableEndpoints': availableEndpoints,
 		});
 	}
-	console.log(req.query);
 	// Otherwise, forward the requqest and parameters to zillow library.
-	response = zillow.get(req.params.endpoint, req.query);
-	res.json(response);
+	zillow.get(req.params.endpoint, req.query)
+		.then(function(results) {
+			res.json(results)
+  	});
 });
 
 // Set-up some of the API.
