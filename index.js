@@ -11,6 +11,14 @@ const zillow = new Zillow("X1-ZWz1gklptnjw97_5xiff", {
 });
 
 
+// Enable CORS requests on all domains.
+app.all('*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+ });
+
+
 // Serve static content in public/ directory.
 app.use(express.static(path.join(__dirname, 'public')));
 
