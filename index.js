@@ -7,7 +7,7 @@ const linkData = require('./url-list.json').data;
 
 const app = express();
 
-const zillow = new Zillow("X1-ZWz1gklptnjw97_5xiff", {
+const zillow = new Zillow("X1-ZWz18fsp4hqz2j_8uv2u", {
 	https: true
 });
 
@@ -68,8 +68,10 @@ app.get('/lenslet', async (req, res) => {
 		zpid: req.query.zpid,
 	});
 	if (!('response' in results)) {
-		console.log("Rendering error page!");
-		return res.render('pages/index');
+		return res.json({
+			error: "Unable to retrieve results!",
+			results: results,
+		});
 	}
 	const result = results.response;
 	const address = result.address;
@@ -94,6 +96,7 @@ app.get('/lenslet', async (req, res) => {
 	}
 	const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
 	// return res.json(price);
+	console.log(address)
 	return res.render('pages/property', {
 		imageUrls: imageUrls,
 		address: address,
