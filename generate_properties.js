@@ -3,7 +3,7 @@ const availableEndpoints = require('./lib/api-list');
 const fs = require('fs');
 
 const BATCH_SIZE = 100;
-const NUM_BATCH = 1;
+const NUM_BATCH = 10;
 const OUTPUT_FILE = "./url-list.json"
 const MAX_ZPID = 1000000 * BATCH_SIZE
 
@@ -52,6 +52,8 @@ async function processBatch(n_batch) {
 	requests = filtered.map(it => {
 		return zillow.get('GetUpdatedPropertyDetails', {
 			zpid: it.zpid
+		}).catch(err => {
+			console.log(err);
 		});
 	});
 	const results = await Promise.all(requests);
