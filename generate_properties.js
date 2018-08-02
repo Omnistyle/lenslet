@@ -88,6 +88,9 @@ async function processBatch(num_results, invalid = {}) {
 async function main(){
 	const res = await processBatch(NUM_RESULTS);
 	const filename = formatDate(new Date()) + "_" + OUTPUT_FILE
+	fs.writeFile(OUTPUT_FILE, JSON.stringify({'data' : res}, null, 2), err => {
+		if (err) throw err;
+	});
 	fs.writeFile(filename, JSON.stringify({'data' : res}, null, 2), err => {
 		if (err) throw err;
 		console.log('Saved ' + res.length + ' data points to ' + filename + "!");
