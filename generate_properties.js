@@ -2,9 +2,9 @@ const Zillow = require("node-zillow");
 const availableEndpoints = require('./lib/api-list');
 const fs = require('fs');
 
-const BATCH_SIZE = 10;
+const BATCH_SIZE = 100;
 const NUM_RESULTS = 100;
-const OUTPUT_FILE = "./url-list.json"
+const OUTPUT_FILE = "url-list.json"
 const MAX_ZPID = 1000000 * BATCH_SIZE
 
 const zillow = new Zillow("X1-ZWz1gezl3o5jbf_1vfab", {
@@ -12,9 +12,9 @@ const zillow = new Zillow("X1-ZWz1gezl3o5jbf_1vfab", {
 });
 
 function formatDate(date) {
-    const yearString = date.getFullYear().toString();
-    const monthString = (date.getMonth() + 1).toString();
-    const dayString = date.getDate().toString();
+    var yearString = date.getFullYear().toString();
+    var monthString = (date.getMonth() + 1).toString();
+    var dayString = date.getDate().toString();
     (dayString.length == 1) && (dayString = '0' + dayString);
     (monthString.length == 1) && (monthString = '0' + monthString);
     return yearString + monthString + dayString;
@@ -73,11 +73,9 @@ async function processBatch(num_results, invalid = {}) {
 		});
 	});
 	const results = await Promise.all(requests);
-	console.log(results);
 	var final = []
 	for (var i = 0; i < results.length; i++) {
 		if ('response' in results[i] && 'images' in results[i].response) {
-			console.log('here');
 			final.push(filtered[i]);
 		}
 	}
