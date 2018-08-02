@@ -7,6 +7,21 @@ const linkData = require('./url-list.json').data;
 
 const app = express();
 
+function deepFind(obj, path, base=undefined) {
+  var paths = path.split('.')
+    , current = obj
+    , i;
+
+  for (i = 0; i < paths.length; ++i) {
+    if (current[paths[i]] == undefined) {
+      return base;
+    } else {
+      current = current[paths[i]];
+    }
+  }
+  return current;
+}
+
 const zillow = new Zillow("X1-ZWz18fsp4hqz2j_8uv2u", {
 	https: true
 });
@@ -82,27 +97,34 @@ app.get('/lenslet', async (req, res) => {
 			imageUrls.push(image.url[j])
 		}
 	}
-	console.log(imageUrls);
 	const description = result.homeDescription;
 
 	// Also grab the Zestimate.
-	const estimate = await zillow.get('GetZestimate', {
+	const estimate = await zillow.get('GetDeepSearchResults', {
 		zpid: req.query.zpid,
+		address: address.street,
+		citystatezip: address.zipcode,
+		rentzestimate: true,
+
 	});
-	var price = "Unknown";
-	if ('response' in estimate && 'zestimate' in estimate.response &&
-			'amount' in estimate.response.zestimate) {
-		price = estimate.response.zestimate.amount[0]['_'];
-	}
+	const lastSold = parseInt(deepFind(estimate, 'response.results.result.0.lastSoldPrice.0._', 0));
+	const price = parseInt(deepFind(estimate, 'response.results.result.0.zestimate.0.amount.0._', 0));
+	const currency = deepFind(estimate, 'response.results.result.0.lastSoldPrice.0.$.currency', 'USD');
+	const sqFootage  = parseInt(deepFind(estimate, 'response.results.result.0.finishedSqFt', 0));
+	const yearBuilt = parseInt(deepFind(estimate, 'response.results.result.0.yearBuilt', 0));
+	const medianListPrice = parseInt(deepFind(estimate, 'response.results.result.0.localRealEstate.0.region.0.zindexValue', 0))
 	const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
 	// return res.json(price);
-	console.log(address)
 	return res.render('pages/property', {
 		imageUrls: imageUrls,
 		address: address,
 		description: description,
-		price: price,
+		price: price.toLocaleString('en-US', {style: 'currency', currency: currency}),
+		lastSold: lastSold.toLocaleString('en-US', {style: 'currency', currency: currency}),
 		siteUrl: fullUrl,
+		sqFootage: sqFootage,
+		yearBuilt: yearBuilt,
+		medianListPrice: medianListPrice.toLocaleString('en-US', {style: 'currency', currency: currency}),
 	});
 })
 
