@@ -1,5 +1,93 @@
-<title>Zillow Lenslet (Prototype)</title>
-<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+  <meta charset="utf-8">
+  <title>Zillow House Information</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- #### Setup -->
+    <!-- Import `amp-selector` component in the header which we'll use to implement the tab switching. -->
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+    <!-- Import `amp-carousel` component in the header which we'll use as a sample tab content -->
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <!-- Import `amp-bind` component in the header which we'll use to switch tabs via buttons -->
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <!-- There's just a bit of css that's needed -->
+    <style amp-custom>       
+        .ampTabContainer {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .tabButton[selected] {
+            outline: none;
+            background: #ccc;
+        }
+        
+        .tabButton {
+            list-style: none;
+            flex-grow: 1;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .tabContent {
+            display: none;
+            width: 100%;
+            order: 1; /* must be greater than the order of the tab buttons to flex to the next line */
+            border: 1px solid #ccc;
+        }
+        
+        .tabButton[selected]+.tabContent {
+            display: block;
+        }
+        /* For example below (not required) */
+        .itemCustom {
+            border: 1px solid #000;
+            height: 280px;
+            width: 380px;
+            margin: 10px;
+            text-align: center;
+            padding-top: 140px;
+        }
+        amp-selector {
+          padding: 1rem;
+          margin: 1rem;
+        }
+      .bold{
+        font-weight: bold
+      }
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <!-- adding metadata for the entrypoint -->
+    <script type="application/ld+json">
+       {
+         "@context": {
+           "@vocab": "http://schema.org",
+           "g": "http://developers.google.com/lens"
+         },
+         "@type": "ARArtifact",
+         "anchor": {
+           "@type": "ARCompositeAnchor",
+           "anchor": {
+             "@type": "ARMarker",
+             "markerValue": "<=% imageUrl %>",
+             "markerType": "image"
+           },
+           "nearby": {
+             "@type": "Place",
+             "address": {
+               "@type": "PostalAddress",
+               "addressLocality": <%= address.city %>,
+               "addressRegion": <%= address.state %>,
+               "postalCode": <%= address.zipcode %>,
+               "streetAddress": <%= address.street %>
+             }
+           }
+         },
+         "asset": {
+           "@type": "WebPage",
+           "name": "Zillow House Info: <%= address.street %>",
+           "description": "Real estate information for <%= address.street %>",
+           "url": <%= siteUrl %>
+         }
+       }
+    </script>
