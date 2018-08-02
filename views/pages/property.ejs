@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+    <!--
+    ####  Amp component as the panel
+    You can have just about anything as `tabContent` - the `amp-carousel` is a good example of a more complex component being used.
+    -->
+    <div id="content">
+      <amp-selector role="tablist" layout="container" class="ampTabContainer">
+        <div role="tab" class="tabButton" selected option="a">Overview</div>
+        <div role="tabpanel" class="tabContent">
+          <amp-carousel height="300" layout="fixed-height" type="carousel">
+          	<% for (i in imageUrls) {%>
+						   <amp-img src="<%= imageUrls[i] %>" width="400" height="300"></amp-img>
+						<% } %>
+        	</amp-carousel>
+          <div> 
+            <h2><%= address.street %></h2>
+            <p> <span class="bold">Redfin Estimate: </span> $<%= price %> </p>
+            <p> <span class="bold">Last Sold Price: </span> $668,000 </p>
+            <p> <span class="bold">Square Footage: </span> 730 sq ft </p>
+            <p> <span class="bold">Built: </span> 1953 </p>     
+          </div>
+          <div>
+        		<p><%= description %></p>
+        	</div>
+        </div>
+        <div role="tab" class="tabButton" option="b">Neighborhood</div>
+        <div role="tabpanel" class="tabContent">
+            <div> 
+              <h2>Neighborhood Info for <%= address.street %></h2>
+              <p> <span class="bold">Transportation in <%= address.zipcode %>: </span> 39/100, Car Dependent </p>
+              <p> <span class="bold"><%= address.zipcode %> Sales(Last 30 days): </span> Median list price of 1,299,500 </p> 
+           </div>
+        </div>
+    </amp-selector>
+    </div>
+</body>
+</html>
+
