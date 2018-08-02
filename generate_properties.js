@@ -11,23 +11,29 @@ const zillow = new Zillow("X1-ZWz1gklptnjw97_5xiff", {
 	https: true
 });
 
-// Passes the results of making 'n_batch' batches of requests into next.
-// Requests are made asynchronously, BATCH_SIZE at a time.
-async function processBatch(n_batch) {
-	if (n_batch <= 0) {
+// Returns a promise containing 'num_results' which satisfy all of our required
+// properties. 'invalid' is an object containing keys corresponding to invalid
+// zpids.
+async function processBatch(num_results, invalid = {}) {
+	if (num_results <= 0) {
 		return [];
 	}
-	requests = []
-	for (var i = 0; i < BATCH_SIZE; i++) {
-		requests.push(
-			zillow.get('GetZestimate', {
-				zpid: Math.floor(Math.random() * Math.floor(MAX_ZPID))
-			}).catch(err => {
+	var requests = [];
+	for(var i = 0; i < Math.min(BATCH_SIZE, num_results); i++) {
+		var candidateZpid = Math.floor(Math.random() * Math.floor(MAX_ZPID));
+		while(candidateZpid in invalid) {
+			candidateZpid = Math.floor(Math.random() * Math.floor(MAX_ZPID));
+		}
+		// Add it to invalid so we can keep track.
+		invalid[candidateZpid] = true
+		requests.push(zillow.get('GetZestimate', {
+				zpid: candidateZpid)
+		}.catch(err => {
 					console.log(err);
-				})
-		);
+		}));
 	}
-	// Wait for all promises to return.
+	
+	// Wait for requested results to return asynchronously.
 	const curr = await Promise.all(requests)
 	const filtered = curr.filter(it => {
 		// Only keep those that have the data from which we want to construct
@@ -64,7 +70,7 @@ async function processBatch(n_batch) {
 		}
 	}
 
-	const rest = await processBatch(n_batch - 1);
+	const rest = await processBatch(num_results - final.length, invalid);
 	return final.concat(rest);
 };
 
