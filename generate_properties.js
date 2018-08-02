@@ -2,8 +2,8 @@ const Zillow = require("node-zillow");
 const availableEndpoints = require('./lib/api-list');
 const fs = require('fs');
 
-const BATCH_SIZE = 100;
-const NUM_BATCH = 10;
+const BATCH_SIZE = 1000;
+const NUM_RESULTS = 10000;
 const OUTPUT_FILE = "./url-list.json"
 const MAX_ZPID = 1000000 * BATCH_SIZE
 
@@ -27,8 +27,8 @@ async function processBatch(num_results, invalid = {}) {
 		// Add it to invalid so we can keep track.
 		invalid[candidateZpid] = true
 		requests.push(zillow.get('GetZestimate', {
-				zpid: candidateZpid)
-		}.catch(err => {
+				zpid: candidateZpid}
+		).catch(err => {
 					console.log(err);
 		}));
 	}
@@ -75,7 +75,7 @@ async function processBatch(num_results, invalid = {}) {
 };
 
 async function main(){
-	const res = await processBatch(NUM_BATCH);
+	const res = await processBatch(NUM_RESULTS);
 	fs.writeFile(OUTPUT_FILE, JSON.stringify({'data' : res}, null, 2), err => {
 		if (err) throw err;
 		console.log('Saved ' + res.length + ' data points!');
