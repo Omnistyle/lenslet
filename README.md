@@ -86,3 +86,13 @@ Once the heroku app is created (or associated with the existing lenslet.herokuap
 ```
 $ git push heroku master
 ```
+
+## Generating Sitemap
+
+Lenslet requires that we provide a sitemap. In order to generate a list of "good" URLs (ie, properties with pictures and all the information that we want to show), you can run:
+
+```
+node generate_properties.js
+```
+
+The output will be stored in `url-list.json`. Take a look at the file to determine what values can be changed.
