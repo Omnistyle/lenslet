@@ -18,6 +18,7 @@ async function processBatch(num_results, invalid = {}) {
 	if (num_results <= 0) {
 		return [];
 	}
+	console.log('Requests left to fulfill: ' + num_results);
 	var requests = [];
 	for(var i = 0; i < Math.min(BATCH_SIZE, num_results); i++) {
 		var candidateZpid = Math.floor(Math.random() * Math.floor(MAX_ZPID));
@@ -27,14 +28,14 @@ async function processBatch(num_results, invalid = {}) {
 		// Add it to invalid so we can keep track.
 		invalid[candidateZpid] = true
 		requests.push(zillow.get('GetZestimate', {
-				zpid: candidateZpid}
-		).catch(err => {
+				zpid: candidateZpid
+			}).catch(err => {
 					console.log(err);
 		}));
 	}
 	
 	// Wait for requested results to return asynchronously.
-	const curr = await Promise.all(requests)
+	const curr = await Promise.all(requests).catch(err => console.log(err));
 	const filtered = curr.filter(it => {
 		// Only keep those that have the data from which we want to construct
 		// the URL.
@@ -69,7 +70,6 @@ async function processBatch(num_results, invalid = {}) {
 			final.push(filtered[i]);
 		}
 	}
-
 	const rest = await processBatch(num_results - final.length, invalid);
 	return final.concat(rest);
 };
