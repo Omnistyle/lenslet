@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <head>
-   <% include ../partials/header.ejs %>
    <style amp-runtime="">html{overflow-x:hidden!important}body,html{height:auto!important}html.i-amphtml-fie{height:100%!important;width:100%!important}body{margin:0!important;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}[hidden]{display:none!important}html.i-amphtml-singledoc.i-amphtml-embedded{-ms-touch-action:pan-y;touch-action:pan-y}html.i-amphtml-fie>body,html.i-amphtml-singledoc>body{overflow:visible!important;position:relative!important}html.i-amphtml-webview>body{overflow-x:hidden!important;overflow-y:visible!important;min-height:100vh!important}html.i-amphtml-ios-embed-legacy>body{overflow-x:hidden!important;overflow-y:auto!important;position:absolute!important}html.i-amphtml-ios-embed{overflow-y:auto!important;position:static}#i-amphtml-wrapper{overflow-x:hidden!important;overflow-y:auto!important;position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:0!important;margin:0!important;display:block!important}html.i-amphtml-ios-embed.i-amphtml-ios-overscroll,html.i-amphtml-ios-embed.i-amphtml-ios-overscroll>#i-amphtml-wrapper{-webkit-overflow-scrolling:touch!important}#i-amphtml-wrapper>body{position:relative!important;border-top:1px solid transparent!important}html.i-amphtml-ios-embed-sd{overflow:hidden!important;position:static!important}html.i-amphtml-ios-embed-sd>body,html.i-amphtml-singledoc.i-amphtml-ios-embed-sd>body{position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:0!important;overflow:hidden!important}.i-amphtml-element{display:inline-block}.i-amphtml-layout-fixed,[layout=fixed][width][height]:not(.i-amphtml-layout-fixed){display:inline-block;position:relative}.i-amphtml-layout-responsive,[layout=responsive][width][height]:not(.i-amphtml-layout-responsive),[width][height][sizes]:not(.i-amphtml-layout-responsive){display:block;position:relative}.i-amphtml-layout-intrinsic{display:inline-block;position:relative;max-width:100%}.i-amphtml-intrinsic-sizer{max-width:100%;display:block!important}.i-amphtml-layout-fixed-height,[layout=fixed-height][height]{display:block;position:relative}.i-amphtml-layout-container,[layout=container]{display:block;position:relative}.i-amphtml-layout-fill,[layout=fill]:not(.i-amphtml-layout-fill){display:block;overflow:hidden!important;position:absolute;top:0;left:0;bottom:0;right:0}.i-amphtml-layout-flex-item,[layout=flex-item]:not(.i-amphtml-layout-flex-item){display:block;position:relative;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto}.i-amphtml-layout-fluid{position:relative}.i-amphtml-layout-size-defined{overflow:hidden!important}.i-amphtml-layout-awaiting-size{position:absolute!important;top:auto!important;bottom:auto!important}i-amphtml-sizer{display:block!important}.i-amphtml-fill-content{display:block;height:0;max-height:100%;max-width:100%;min-height:100%;min-width:100%;width:0;margin:auto}.i-amphtml-layout-size-defined .i-amphtml-fill-content{position:absolute;top:0;left:0;bottom:0;right:0}.i-amphtml-layout-intrinsic .i-amphtml-sizer{max-width:100%}.i-amphtml-replaced-content,.i-amphtml-screen-reader{padding:0!important;border:none!important}.i-amphtml-screen-reader{position:fixed!important;top:0px!important;left:0px!important;width:4px!important;height:4px!important;opacity:0!important;overflow:hidden!important;margin:0!important;display:block!important;visibility:visible!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:8px!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:12px!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:16px!important}.i-amphtml-unresolved{position:relative;overflow:hidden!important}#i-amphtml-wrapper.i-amphtml-scroll-disabled,.i-amphtml-scroll-disabled{overflow-x:hidden!important;overflow-y:hidden!important}.i-amphtml-select-disabled{-webkit-user-select:none!important;-moz-user-select:none!important;-ms-user-select:none!important;user-select:none!important}.i-amphtml-notbuilt,[layout]:not(.i-amphtml-element){position:relative;overflow:hidden!important;color:transparent!important}.i-amphtml-notbuilt:not(.i-amphtml-layout-container)>*,[layout]:not([layout=container]):not(.i-amphtml-element)>*{display:none}.i-amphtml-ghost{visibility:hidden!important}[layout=nodisplay]:not(.i-amphtml-display){display:none!important}.i-amphtml-element>[placeholder],[layout]:not(.i-amphtml-element)>[placeholder]{display:block}.i-amphtml-element>[placeholder].amp-hidden,.i-amphtml-element>[placeholder].hidden{visibility:hidden}.i-amphtml-element:not(.amp-notsupported)>[fallback]{display:none}.i-amphtml-layout-size-defined>[fallback],.i-amphtml-layout-size-defined>[placeholder]{position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:0!important;z-index:1}.i-amphtml-notbuilt>[placeholder]{display:block!important}.i-amphtml-hidden-by-media-query{display:none!important}.i-amphtml-element-error{background:red!important;color:#fff!important;position:relative!important}.i-amphtml-element-error:before{content:attr(error-message)}i-amp-scroll-container,i-amphtml-scroll-container{position:absolute;top:0;left:0;right:0;bottom:0;display:block}i-amp-scroll-container.amp-active,i-amphtml-scroll-container.amp-active{overflow:auto;-webkit-overflow-scrolling:touch}.i-amphtml-loading-container{display:block!important;z-index:1}.i-amphtml-notbuilt>.i-amphtml-loading-container{display:block!important}.i-amphtml-loading-container.amp-hidden{visibility:hidden}.i-amphtml-loader-line{position:absolute;top:0;left:0;right:0;height:1px;overflow:hidden!important;background-color:hsla(0,0%,59.2%,0.2);display:block}.i-amphtml-loader-moving-line{display:block;position:absolute;width:100%;height:100%!important;background-color:hsla(0,0%,59.2%,0.65);z-index:2}@-webkit-keyframes i-amphtml-loader-line-moving{0%{-webkit-transform:translateX(-100%);transform:translateX(-100%)}to{-webkit-transform:translateX(100%);transform:translateX(100%)}}@keyframes i-amphtml-loader-line-moving{0%{-webkit-transform:translateX(-100%);transform:translateX(-100%)}to{-webkit-transform:translateX(100%);transform:translateX(100%)}}.i-amphtml-loader-line.amp-active .i-amphtml-loader-moving-line{-webkit-animation:i-amphtml-loader-line-moving 4s ease infinite;animation:i-amphtml-loader-line-moving 4s ease infinite}.i-amphtml-loader{position:absolute;display:block;height:10px;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;white-space:nowrap}.i-amphtml-loader.amp-active .i-amphtml-loader-dot{-webkit-animation:i-amphtml-loader-dots 2s infinite;animation:i-amphtml-loader-dots 2s infinite}.i-amphtml-loader-dot{position:relative;display:inline-block;height:10px;width:10px;margin:2px;border-radius:100%;background-color:rgba(0,0,0,0.3);box-shadow:2px 2px 2px 1px rgba(0,0,0,0.2);will-change:transform}.i-amphtml-loader .i-amphtml-loader-dot:first-child{-webkit-animation-delay:0s;animation-delay:0s}.i-amphtml-loader .i-amphtml-loader-dot:nth-child(2){-webkit-animation-delay:.1s;animation-delay:.1s}.i-amphtml-loader .i-amphtml-loader-dot:nth-child(3){-webkit-animation-delay:.2s;animation-delay:.2s}@-webkit-keyframes i-amphtml-loader-dots{0%,to{-webkit-transform:scale(.7);transform:scale(.7);background-color:rgba(0,0,0,0.3)}50%{-webkit-transform:scale(.8);transform:scale(.8);background-color:rgba(0,0,0,0.5)}}@keyframes i-amphtml-loader-dots{0%,to{-webkit-transform:scale(.7);transform:scale(.7);background-color:rgba(0,0,0,0.3)}50%{-webkit-transform:scale(.8);transform:scale(.8);background-color:rgba(0,0,0,0.5)}}.i-amphtml-element>[overflow]{cursor:pointer;position:relative;z-index:2;visibility:hidden}.i-amphtml-element>[overflow].amp-visible{visibility:visible}template{display:none!important}.amp-border-box,.amp-border-box *,.amp-border-box :after,.amp-border-box :before{box-sizing:border-box}amp-pixel{display:none!important}amp-instagram{padding:64px 0px 0px!important;background-color:#fff}amp-analytics,amp-story-auto-ads{position:fixed!important;top:0!important;width:1px!important;height:1px!important;overflow:hidden!important;visibility:hidden}amp-iframe iframe{box-sizing:border-box!important}[amp-access][amp-access-hide]{display:none}[subscriptions-dialog],body:not(.i-amphtml-subs-ready) [subscriptions-action],body:not(.i-amphtml-subs-ready) [subscriptions-section]{display:none!important}form [submit-error],form [submit-success],form [submitting]{display:none}[visible-when-invalid]{display:none}amp-live-list>[update]{display:none}amp-experiment,amp-share-tracking{display:none}.i-amphtml-jank-meter{position:fixed;background-color:rgba(232,72,95,0.5);bottom:0;right:0;color:#fff;font-size:16px;z-index:1000;padding:5px}amp-accordion{display:block!important}amp-accordion>section{float:none!important}amp-accordion>section>*{float:none!important;display:block!important;overflow:hidden!important;position:relative!important}.i-amphtml-accordion-content,.i-amphtml-accordion-header,amp-accordion,amp-accordion>section{margin:0}.i-amphtml-accordion-header{cursor:pointer;background-color:#efefef;padding-right:20px;border:1px solid #dfdfdf}amp-accordion>section>:last-child{display:none!important}amp-accordion>section[expanded]>:last-child{display:block!important}amp-story-page,amp-story[standalone]{display:block!important;height:100%!important;margin:0!important;padding:0!important;overflow:hidden!important;width:100%!important}amp-story[standalone]{background-color:#fff!important;position:relative!important}amp-story-page{background-color:#757575}amp-story .i-amphtml-loader{display:none!important}[amp-fx^=fly-in]{visibility:hidden}
       /*# sourceURL=/css/amp.css*/
    </style>
    <meta charset="utf-8">
-   <meta name="title" content=<%= address.street %>>
+   <meta name="title" content="Sacramento Indian | FAMSF AMP Sandbox">
    <link rel="canonical" href="http://dev-amp-sandbox.pantheonsite.io/lenslet/sacramento-indian">
    <meta name="description" content="Tumblr synth deep v tumeric. Iceland literally bespoke, poke kogi live-edge hexagon. Artisan asymmetrical cardigan tousled, lomo cred try-hard trust fund mixtape activated charcoal pop-up. Wayfarers gluten-free ennui intelligentsia pinterest.">
    <meta name="Generator" content="Drupal 8 (https://www.drupal.org)">
@@ -13,7 +12,7 @@
    <meta name="HandheldFriendly" content="true">
    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
    <link rel="shortcut icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon">
-   <title><%= address.street %></title>
+   <title>Sacramento Indian | FAMSF AMP Sandbox</title>
    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -44,12 +43,6 @@
    </noscript>
    <style amp-custom="">
       /* ---------- Layout ----------- */
-      .center-image {
-         display: block;
-         margin-left: auto;
-         margin-right: auto;
-         /*width: 50%;*/
-      }
       html {
       height: 100%;
       }
@@ -154,16 +147,6 @@
       box-shadow: 0 1px 5px #ccc;
       z-index: 9;
       }
-      .copyright-info {
-      
-      font-size: 73%;
-      padding: 3em 0 1em;
-      
-      }
-      .copyright-info p {
-         margin: 0 2em 1.75rem;
-         text-align: center;
-      }
       .curator-notes p {
       margin: 0 2em 1.75rem;
       text-align: center;
@@ -185,12 +168,12 @@
       background: #fff;
       text-align: center;
       color: #4a4a4a;
-      background: #fff url(http://dev-amp-sandbox.pantheonsite.io/themes/custom/lenstheme/images/arrow-down.png) center no-repeat;
+      background: #fff url(/themes/custom/lenstheme/images/arrow-down.png) center no-repeat;
       background-size: 12px auto;
       z-index: 999;
       } 
       .curator-notes::before {
-      background: #333 url(zillow.png) center no-repeat;
+      background: #333 url(/themes/custom/lenstheme/images/curator.jpg) center no-repeat;
       width: 52px;
       height: 52px;
       display: block;
@@ -199,8 +182,6 @@
       margin-top: -70px;
       border-radius: 50%;
       border: 9px solid #fff;
-      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-      filter: grayscale(100%);
       }
       .curator-notes h3 {
       margin-top: 10px;
@@ -718,7 +699,7 @@
                         * field.html.twig
                         -->
                      <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/field--node--title.html.twig' -->
-                     <span><%= address.street %></span>
+                     <span>Sacramento Indian</span>
                      <!-- END OUTPUT from 'core/themes/stable/templates/field/field--node--title.html.twig' -->
                   </h1>
                   <!-- END OUTPUT from 'core/themes/stable/templates/content/page-title.html.twig' -->
@@ -775,7 +756,7 @@
                               -->
                            <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
                            <div>
-                              <p><%= address.city %>, <%= address.state %></p>
+                              <p>Charles Christian Nahl</p>
                            </div>
                            <!-- END OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
                            <!-- THEME DEBUG -->
@@ -818,14 +799,10 @@
                            <!-- THEME DEBUG -->
                            <!-- THEME HOOK: 'image' -->
                            <!-- BEGIN OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
-                           <% for (i in imageUrls) {%>
-                              <amp-img layout="responsive" src="<%= imageUrls[0] %>" width="1024" height="150" alt="photo of the property" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-layout">
+                           <amp-img layout="responsive" src="/sites/default/files/styles/lenslet_header/public/2018-05/A311352_0.jpg?itok=_9vVh5mh" width="1024" height="420" alt="Sacramento Indian Charles Christian Nahl" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-layout">
                               <i-amphtml-sizer style="display: block; padding-top: 41.0156%;"></i-amphtml-sizer>
                               <img decoding="async" alt="Sacramento Indian Charles Christian Nahl" src="/sites/default/files/styles/lenslet_header/public/2018-05/A311352_0.jpg?itok=_9vVh5mh" class="i-amphtml-fill-content i-amphtml-replaced-content">
-                              </amp-img>
-                           <% break;
-                           } %>
-                           
+                           </amp-img>
                            <!-- END OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
                            <!-- END OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
                            <!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
@@ -843,8 +820,8 @@
                            -->
                         <!-- BEGIN OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--body--lenslet.html.twig' -->
                         <div class="curator-notes">
-                           <h3>About the place</h3>
-                           <p><%= description %></p>
+                           <h3>Curator's notes</h3>
+                           <p>Tumblr synth deep v tumeric. Iceland literally bespoke, poke kogi live-edge hexagon. Artisan asymmetrical cardigan tousled, lomo cred try-hard trust fund mixtape activated charcoal pop-up. Wayfarers gluten-free ennui intelligentsia pinterest.</p>
                         </div>
                         <div class="curator-notes-after"></div>
                         <!-- END OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--body--lenslet.html.twig' -->
@@ -859,7 +836,124 @@
                            * field.html.twig
                            -->
                         <!-- BEGIN OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--field-badges--lenslet.html.twig' -->
-                        
+                        <div class="badges">
+                           <div class="badges-inner">
+                              <div class="badge">
+                                 <!-- THEME DEBUG -->
+                                 <!-- THEME HOOK: 'taxonomy_term' -->
+                                 <!-- FILE NAME SUGGESTIONS:
+                                    * taxonomy-term--3.html.twig
+                                    * taxonomy-term--badges.html.twig
+                                    x taxonomy-term.html.twig
+                                    -->
+                                 <!-- BEGIN OUTPUT from 'core/themes/stable/templates/content/taxonomy-term.html.twig' -->
+                                 <div>
+                                    <h2>
+                                       <a href="/taxonomy/term/3">
+                                          <!-- THEME DEBUG -->
+                                          <!-- THEME HOOK: 'field' -->
+                                          <!-- FILE NAME SUGGESTIONS:
+                                             * field--taxonomy-term--name--badges.html.twig
+                                             * field--taxonomy-term--name.html.twig
+                                             * field--taxonomy-term--badges.html.twig
+                                             * field--name.html.twig
+                                             * field--string.html.twig
+                                             x field.html.twig
+                                             -->
+                                          <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+                                          <div>Art History 101</div>
+                                          <!-- END OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+                                       </a>
+                                    </h2>
+                                    <!-- THEME DEBUG -->
+                                    <!-- THEME HOOK: 'field' -->
+                                    <!-- FILE NAME SUGGESTIONS:
+                                       * field--taxonomy-term--field-badge-image--badges.html.twig
+                                       * field--taxonomy-term--field-badge-image.html.twig
+                                       * field--taxonomy-term--badges.html.twig
+                                       * field--field-badge-image.html.twig
+                                       * field--image.html.twig
+                                       x field.html.twig
+                                       -->
+                                    <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+                                    <div>
+                                       <!-- THEME DEBUG -->
+                                       <!-- THEME HOOK: 'image_formatter' -->
+                                       <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+                                       <!-- THEME DEBUG -->
+                                       <!-- THEME HOOK: 'image_style' -->
+                                       <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
+                                       <!-- THEME DEBUG -->
+                                       <!-- THEME HOOK: 'image' -->
+                                       <!-- BEGIN OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
+                                       <amp-img src="/sites/default/files/styles/badge32/public/2018-05/ic_arthistory.png?itok=8wcNBzi_" width="32" height="32" alt="Art History 101" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 32px; height: 32px;"><img decoding="async" alt="Art History 101" src="/sites/default/files/styles/badge32/public/2018-05/ic_arthistory.png?itok=8wcNBzi_" class="i-amphtml-fill-content i-amphtml-replaced-content"></amp-img>
+                                       <!-- END OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
+                                       <!-- END OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
+                                       <!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+                                    </div>
+                                    <!-- END OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+                                 </div>
+                                 <!-- END OUTPUT from 'core/themes/stable/templates/content/taxonomy-term.html.twig' -->
+                              </div>
+                              <div class="badge">
+                                 <!-- THEME DEBUG -->
+                                 <!-- THEME HOOK: 'taxonomy_term' -->
+                                 <!-- FILE NAME SUGGESTIONS:
+                                    * taxonomy-term--4.html.twig
+                                    * taxonomy-term--badges.html.twig
+                                    x taxonomy-term.html.twig
+                                    -->
+                                 <!-- BEGIN OUTPUT from 'core/themes/stable/templates/content/taxonomy-term.html.twig' -->
+                                 <div>
+                                    <h2>
+                                       <a href="/taxonomy/term/4">
+                                          <!-- THEME DEBUG -->
+                                          <!-- THEME HOOK: 'field' -->
+                                          <!-- FILE NAME SUGGESTIONS:
+                                             * field--taxonomy-term--name--badges.html.twig
+                                             * field--taxonomy-term--name.html.twig
+                                             * field--taxonomy-term--badges.html.twig
+                                             * field--name.html.twig
+                                             * field--string.html.twig
+                                             x field.html.twig
+                                             -->
+                                          <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+                                          <div>California History</div>
+                                          <!-- END OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+                                       </a>
+                                    </h2>
+                                    <!-- THEME DEBUG -->
+                                    <!-- THEME HOOK: 'field' -->
+                                    <!-- FILE NAME SUGGESTIONS:
+                                       * field--taxonomy-term--field-badge-image--badges.html.twig
+                                       * field--taxonomy-term--field-badge-image.html.twig
+                                       * field--taxonomy-term--badges.html.twig
+                                       * field--field-badge-image.html.twig
+                                       * field--image.html.twig
+                                       x field.html.twig
+                                       -->
+                                    <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+                                    <div>
+                                       <!-- THEME DEBUG -->
+                                       <!-- THEME HOOK: 'image_formatter' -->
+                                       <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+                                       <!-- THEME DEBUG -->
+                                       <!-- THEME HOOK: 'image_style' -->
+                                       <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
+                                       <!-- THEME DEBUG -->
+                                       <!-- THEME HOOK: 'image' -->
+                                       <!-- BEGIN OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
+                                       <amp-img src="/sites/default/files/styles/badge32/public/2018-05/ic_calhistory.png?itok=gt8S0lKr" width="32" height="32" alt="California History" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 32px; height: 32px;"><img decoding="async" alt="California History" src="/sites/default/files/styles/badge32/public/2018-05/ic_calhistory.png?itok=gt8S0lKr" class="i-amphtml-fill-content i-amphtml-replaced-content"></amp-img>
+                                       <!-- END OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
+                                       <!-- END OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
+                                       <!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+                                    </div>
+                                    <!-- END OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+                                 </div>
+                                 <!-- END OUTPUT from 'core/themes/stable/templates/content/taxonomy-term.html.twig' -->
+                              </div>
+                           </div>
+                        </div>
                         <!-- END OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--field-badges--lenslet.html.twig' -->
                         <!-- THEME DEBUG -->
                         <!-- THEME HOOK: 'field_group_html_element' -->
@@ -888,43 +982,80 @@
                               * field.html.twig
                               -->
                            <!-- BEGIN OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--field-collection--lenslet.html.twig' -->
-                          
-
                            <div class="art-detail-item">
-                              <div class="artist-label">Zillow Estimate</div>
-                              <%= price %>
+                              <div class="artist-label">Collection</div>
+                              American Art
                            </div>
-                           
+                           <!-- END OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--field-collection--lenslet.html.twig' -->
+                           <!-- THEME DEBUG -->
+                           <!-- THEME HOOK: 'field' -->
+                           <!-- FILE NAME SUGGESTIONS:
+                              x field--node--field-medium--lenslet.html.twig
+                              * field--node--field-medium.html.twig
+                              * field--node--lenslet.html.twig
+                              * field--field-medium.html.twig
+                              * field--string.html.twig
+                              * field.html.twig
+                              -->
+                           <!-- BEGIN OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--field-medium--lenslet.html.twig' -->
                            <div class="art-detail-item">
-                              <div class="artist-label">Last Sold Price</div>
-                              <p><%= lastSold %></p>
+                              <div class="artist-label">Medium</div>
+                              <p>Oil on canvas</p>
                            </div>
-                           
+                           <!-- END OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--field-medium--lenslet.html.twig' -->
+                           <!-- THEME DEBUG -->
+                           <!-- THEME HOOK: 'field' -->
+                           <!-- FILE NAME SUGGESTIONS:
+                              x field--node--field-rights--lenslet.html.twig
+                              * field--node--field-rights.html.twig
+                              * field--node--lenslet.html.twig
+                              * field--field-rights.html.twig
+                              * field--text-long.html.twig
+                              * field.html.twig
+                              -->
+                           <!-- BEGIN OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--field-rights--lenslet.html.twig' -->
+                           <div class="credit">
+                              <div class="artist-label">Credit</div>
+                              <p>Gift of Mrs. Milton S. Latham</p>
+                           </div>
+                           <!-- END OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--field-rights--lenslet.html.twig' -->
+                           <!-- THEME DEBUG -->
+                           <!-- THEME HOOK: 'field' -->
+                           <!-- FILE NAME SUGGESTIONS:
+                              x field--node--field-dimensions--lenslet.html.twig
+                              * field--node--field-dimensions.html.twig
+                              * field--node--lenslet.html.twig
+                              * field--field-dimensions.html.twig
+                              * field--string.html.twig
+                              * field.html.twig
+                              -->
+                           <!-- BEGIN OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--field-dimensions--lenslet.html.twig' -->
                            <div class="art-detail-item">
-                              <div class="artist-label">Square Footage</div>
-                              <p><%= sqFootage %> sq ft</p>
-                           </div>
-
-                           <div class="art-detail-item">
-                              <div class="artist-label">Built</div>
-                              <p><%= yearBuilt %></p>
-                           </div>
-                           
-                           <!-- <div class="art-detail-item">
                               <amp-img src="/themes/custom/lenstheme/images/ic_dimensions.png" width="24" height="24" alt="dimensions icon" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 24px; height: 24px;"><img decoding="async" alt="dimensions icon" src="/themes/custom/lenstheme/images/ic_dimensions.png" class="i-amphtml-fill-content i-amphtml-replaced-content"></amp-img>
                               <div class="art-detail-item-inner">
-                                 <div class="artist-label">Built</div>
-                                 <p><%= yearBuilt %></p>
+                                 <div class="artist-label">Dimensions</div>
+                                 <p>42 1/16 x 49 1/4 in</p>
                               </div>
-                           </div> -->
-
-                           <!-- <div class="art-detail-item">
+                           </div>
+                           <!-- END OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--field-dimensions--lenslet.html.twig' -->
+                           <!-- THEME DEBUG -->
+                           <!-- THEME HOOK: 'field' -->
+                           <!-- FILE NAME SUGGESTIONS:
+                              x field--node--field-country--lenslet.html.twig
+                              * field--node--field-country.html.twig
+                              * field--node--lenslet.html.twig
+                              * field--field-country.html.twig
+                              * field--entity-reference.html.twig
+                              * field.html.twig
+                              -->
+                           <!-- BEGIN OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--field-country--lenslet.html.twig' -->
+                           <div class="art-detail-item">
                               <amp-img src="/themes/custom/lenstheme/images/ic_country.png" width="24" height="24" alt="globe icon" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 24px; height: 24px;"><img decoding="async" alt="globe icon" src="/themes/custom/lenstheme/images/ic_country.png" class="i-amphtml-fill-content i-amphtml-replaced-content"></amp-img>
                               <div class="art-detail-item-inner">
                                  <div class="artist-label">Country</div>
                                  United States
                               </div>
-                           </div> -->
+                           </div>
                            <!-- END OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--field-country--lenslet.html.twig' -->
                         </div>
                         <!-- END OUTPUT from 'modules/contrib/field_group/templates/field-group-html-element.html.twig' -->
@@ -941,7 +1072,7 @@
                         <!-- BEGIN OUTPUT from 'themes/custom/lenstheme/templates/field/field--node--field-artist--lenslet.html.twig' -->
                         <div class="about-the-artist">
                            <div class="artist-inner">
-                              <h4>Neighborhood information</h4>
+                              <h4>About the Artist</h4>
                               <!-- THEME DEBUG -->
                               <!-- THEME HOOK: 'node' -->
                               <!-- FILE NAME SUGGESTIONS:
@@ -968,29 +1099,39 @@
                                              * field.html.twig
                                              -->
                                           <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/field--node--title.html.twig' -->
-                                          <span>Zipcode <%= address.zipcode %></span>
+                                          <span>Charles Christian Nahl</span>
                                           <!-- END OUTPUT from 'core/themes/stable/templates/field/field--node--title.html.twig' -->
                                        </strong>
                                     </h2>
-                                    <div class="nationality"><%= address.city %>, <%= address.state %> </div>
+                                    <div class="nationality">Nationality              American, b. Germany</div>
                                     <div class="artist-details">
                                        <div class="artist-detail-item">
-                                          <div class="artist-label">Median List Price</div>
-                                          <%= medianListPrice %>
+                                          <div class="artist-label">Born:</div>
+                                          1818
                                        </div>
-                                       <!-- <div class="artist-detail-item">
+                                       <div class="artist-detail-item">
                                           <div class="artist-label">Died:</div>
                                           1878
                                        </div>
                                        <div class="artist-detail-item">
                                           <div class="artist-label">Death place:</div>
                                           San Francisco, CA
-                                       </div> -->
+                                       </div>
                                     </div>
-                                   
-                                    <!-- <div>
+                                    <!-- THEME DEBUG -->
+                                    <!-- THEME HOOK: 'field' -->
+                                    <!-- FILE NAME SUGGESTIONS:
+                                       * field--node--body--artist.html.twig
+                                       * field--node--body.html.twig
+                                       * field--node--artist.html.twig
+                                       * field--body.html.twig
+                                       * field--text-with-summary.html.twig
+                                       x field.html.twig
+                                       -->
+                                    <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
+                                    <div>
                                        <p>Fixie celiac palo santo lyft occupy franzen cardigan distillery hot chicken waistcoat listicle banh mi unicorn edison bulb. Man braid whatever messenger bag, organic crucifix brooklyn taiyaki waistcoat mustache master cleanse iPhone offal. Williamsburg fanny pack forage, twee chartreuse vaporware fam keffiyeh humblebrag chambray green juice trust fund next level disrupt. Flexitarian dreamcatcher try-hard, godard photo booth whatever pitchfork. Ha.</p>
-                                    </div> -->
+                                    </div>
                                     <!-- END OUTPUT from 'core/themes/stable/templates/field/field.html.twig' -->
                                  </div>
                               </article>
@@ -1007,14 +1148,13 @@
                            <!-- BEGIN OUTPUT from 'modules/contrib/eva/templates/eva-display-entity-view.html.twig' -->
                            <div class="view view-eva view-related-works view-id-related_works view-display-id-entity_view_1 js-view-dom-id-4d8b542181e48363dbe8d46ed295080781ba8aaff0f897e427434ceaa92af489">
                               <header>
-                                 <h3>More photos</h3>
+                                 <h3>Related Works</h3>
                               </header>
                               <!-- THEME DEBUG -->
                               <!-- THEME HOOK: 'views_view_list' -->
                               <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-list.html.twig' -->
                               <div class="item-list">
                                  <ul>
-                                 <% for (i in imageUrls) {%>
                                     <li>
                                        <!-- THEME DEBUG -->
                                        <!-- THEME HOOK: 'views_view_fields__related_works' -->
@@ -1039,9 +1179,9 @@
                                                 <!-- THEME DEBUG -->
                                                 <!-- THEME HOOK: 'image' -->
                                                 <!-- BEGIN OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
-                                                <amp-img layout="responsive" src="<%= imageUrls[i] %>" width="250" height="60" alt="John Henry Twachtman, Mother and Child, ca. 1893" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-layout">
+                                                <amp-img layout="responsive" src="/sites/default/files/styles/related_works_250/public/2018-05/Twachtman_Mother.jpg?h=5f7d26d9&amp;itok=W8K6igvc" width="250" height="141" alt="John Henry Twachtman, Mother and Child, ca. 1893" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-layout">
                                                    <i-amphtml-sizer style="display: block; padding-top: 56.4%;"></i-amphtml-sizer>
-                                                   <img decoding="async" alt="John Henry Twachtman, Mother and Child, ca. 1893" src="<%= imageUrls[i] %>" class="i-amphtml-fill-content i-amphtml-replaced-content">
+                                                   <img decoding="async" alt="John Henry Twachtman, Mother and Child, ca. 1893" src="/sites/default/files/styles/related_works_250/public/2018-05/Twachtman_Mother.jpg?h=5f7d26d9&amp;itok=W8K6igvc" class="i-amphtml-fill-content i-amphtml-replaced-content">
                                                 </amp-img>
                                                 <!-- END OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
                                                 <!-- END OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
@@ -1052,20 +1192,298 @@
                                        </div>
                                        <div class="views-field views-field-title">
                                           <strong class="field-content">
-                                             
-                                             <a href="/lenslet/mother-and-child?amp"><%= address.street %></a>
-                                            
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             <a href="/lenslet/mother-and-child?amp">Mother and Child</a>
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
                                           </strong>
                                        </div>
                                        <div class="views-field views-field-field-date">
                                           <div class="field-content">
-                                             
-                                             See more
-                                          </div> 
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             John Henry Twachtman (ca. 1893)
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </div>
                                        </div>
                                        <!-- END OUTPUT from 'themes/custom/lenstheme/templates/misc/views-view-fields--related-works.html.twig' -->
                                     </li>
-                                 <% } %>
+                                    <li>
+                                       <!-- THEME DEBUG -->
+                                       <!-- THEME HOOK: 'views_view_fields__related_works' -->
+                                       <!-- FILE NAME SUGGESTIONS:
+                                          x views-view-fields--related-works.html.twig
+                                          x views-view-fields--related-works.html.twig
+                                          * views-view-fields.html.twig
+                                          -->
+                                       <!-- BEGIN OUTPUT from 'themes/custom/lenstheme/templates/misc/views-view-fields--related-works.html.twig' -->
+                                       <div class="views-field views-field-field-image">
+                                          <div class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             <a href="/lenslet/blue-veil?amp">
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image_formatter' -->
+                                                <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image_style' -->
+                                                <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image' -->
+                                                <!-- BEGIN OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
+                                                <amp-img layout="responsive" src="/sites/default/files/styles/related_works_250/public/2018-05/Tarbell_Veil.jpg?h=4258d67e&amp;itok=S4zmQA4H" width="250" height="141" alt="Edmund Charles Tarbell, The Blue Veil, 1898" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-layout">
+                                                   <i-amphtml-sizer style="display: block; padding-top: 56.4%;"></i-amphtml-sizer>
+                                                   <img decoding="async" alt="Edmund Charles Tarbell, The Blue Veil, 1898" src="/sites/default/files/styles/related_works_250/public/2018-05/Tarbell_Veil.jpg?h=4258d67e&amp;itok=S4zmQA4H" class="i-amphtml-fill-content i-amphtml-replaced-content">
+                                                </amp-img>
+                                                <!-- END OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
+                                                <!-- END OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
+                                                <!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+                                             </a>
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </div>
+                                       </div>
+                                       <div class="views-field views-field-title">
+                                          <strong class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             <a href="/lenslet/blue-veil?amp">The Blue Veil</a>
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </strong>
+                                       </div>
+                                       <div class="views-field views-field-field-date">
+                                          <div class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             Edmund Charles Tarbell (1898)
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </div>
+                                       </div>
+                                       <!-- END OUTPUT from 'themes/custom/lenstheme/templates/misc/views-view-fields--related-works.html.twig' -->
+                                    </li>
+                                    <li>
+                                       <!-- THEME DEBUG -->
+                                       <!-- THEME HOOK: 'views_view_fields__related_works' -->
+                                       <!-- FILE NAME SUGGESTIONS:
+                                          x views-view-fields--related-works.html.twig
+                                          x views-view-fields--related-works.html.twig
+                                          * views-view-fields.html.twig
+                                          -->
+                                       <!-- BEGIN OUTPUT from 'themes/custom/lenstheme/templates/misc/views-view-fields--related-works.html.twig' -->
+                                       <div class="views-field views-field-field-image">
+                                          <div class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             <a href="/lenslet/memory-reverend-william-wilcox?amp">
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image_formatter' -->
+                                                <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image_style' -->
+                                                <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image' -->
+                                                <!-- BEGIN OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
+                                                <amp-img layout="responsive" src="/sites/default/files/styles/related_works_250/public/2018-05/Healy_Memory.jpg?h=bb07b111&amp;itok=G7CqLYVa" width="250" height="141" alt="A.J. Healy, To the Memory of Reverend William Wilcox, 1829" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-layout">
+                                                   <i-amphtml-sizer style="display: block; padding-top: 56.4%;"></i-amphtml-sizer>
+                                                   <img decoding="async" alt="A.J. Healy, To the Memory of Reverend William Wilcox, 1829" src="/sites/default/files/styles/related_works_250/public/2018-05/Healy_Memory.jpg?h=bb07b111&amp;itok=G7CqLYVa" class="i-amphtml-fill-content i-amphtml-replaced-content">
+                                                </amp-img>
+                                                <!-- END OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
+                                                <!-- END OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
+                                                <!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+                                             </a>
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </div>
+                                       </div>
+                                       <div class="views-field views-field-title">
+                                          <strong class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             <a href="/lenslet/memory-reverend-william-wilcox?amp">To the Memory of Reverend William Wilcox</a>
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </strong>
+                                       </div>
+                                       <div class="views-field views-field-field-date">
+                                          <div class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             A.J. Healy (1829)
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </div>
+                                       </div>
+                                       <!-- END OUTPUT from 'themes/custom/lenstheme/templates/misc/views-view-fields--related-works.html.twig' -->
+                                    </li>
+                                    <li>
+                                       <!-- THEME DEBUG -->
+                                       <!-- THEME HOOK: 'views_view_fields__related_works' -->
+                                       <!-- FILE NAME SUGGESTIONS:
+                                          x views-view-fields--related-works.html.twig
+                                          x views-view-fields--related-works.html.twig
+                                          * views-view-fields.html.twig
+                                          -->
+                                       <!-- BEGIN OUTPUT from 'themes/custom/lenstheme/templates/misc/views-view-fields--related-works.html.twig' -->
+                                       <div class="views-field views-field-field-image">
+                                          <div class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             <a href="/lenslet/young-girl-flowers?amp">
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image_formatter' -->
+                                                <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image_style' -->
+                                                <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image' -->
+                                                <!-- BEGIN OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
+                                                <amp-img layout="responsive" src="/sites/default/files/styles/related_works_250/public/2018-05/7852312241930037_o4.jpg?h=c4a63293&amp;itok=WP4SfPwz" width="250" height="141" alt="Samuel Miller,  Young Girl with Flowers, ca. 1850" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-layout">
+                                                   <i-amphtml-sizer style="display: block; padding-top: 56.4%;"></i-amphtml-sizer>
+                                                   <img decoding="async" alt="Samuel Miller,  Young Girl with Flowers, ca. 1850" src="/sites/default/files/styles/related_works_250/public/2018-05/7852312241930037_o4.jpg?h=c4a63293&amp;itok=WP4SfPwz" class="i-amphtml-fill-content i-amphtml-replaced-content">
+                                                </amp-img>
+                                                <!-- END OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
+                                                <!-- END OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
+                                                <!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+                                             </a>
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </div>
+                                       </div>
+                                       <div class="views-field views-field-title">
+                                          <strong class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             <a href="/lenslet/young-girl-flowers?amp"> Young Girl with Flowers</a>
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </strong>
+                                       </div>
+                                       <div class="views-field views-field-field-date">
+                                          <div class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             Samuel Miller (ca. 1850)
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </div>
+                                       </div>
+                                       <!-- END OUTPUT from 'themes/custom/lenstheme/templates/misc/views-view-fields--related-works.html.twig' -->
+                                    </li>
+                                    <li>
+                                       <!-- THEME DEBUG -->
+                                       <!-- THEME HOOK: 'views_view_fields__related_works' -->
+                                       <!-- FILE NAME SUGGESTIONS:
+                                          x views-view-fields--related-works.html.twig
+                                          x views-view-fields--related-works.html.twig
+                                          * views-view-fields.html.twig
+                                          -->
+                                       <!-- BEGIN OUTPUT from 'themes/custom/lenstheme/templates/misc/views-view-fields--related-works.html.twig' -->
+                                       <div class="views-field views-field-field-image">
+                                          <div class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             <a href="/lenslet/may-day-central-park?amp">
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image_formatter' -->
+                                                <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image_style' -->
+                                                <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image' -->
+                                                <!-- BEGIN OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
+                                                <amp-img layout="responsive" src="/sites/default/files/styles/related_works_250/public/2018-05/A311272_V1.jpg?h=4d4992b2&amp;itok=vX9iFRrU" width="250" height="141" alt="William James Glackens, May Day, Central Park, ca. 1904" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-layout">
+                                                   <i-amphtml-sizer style="display: block; padding-top: 56.4%;"></i-amphtml-sizer>
+                                                   <img decoding="async" alt="William James Glackens, May Day, Central Park, ca. 1904" src="/sites/default/files/styles/related_works_250/public/2018-05/A311272_V1.jpg?h=4d4992b2&amp;itok=vX9iFRrU" class="i-amphtml-fill-content i-amphtml-replaced-content">
+                                                </amp-img>
+                                                <!-- END OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
+                                                <!-- END OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
+                                                <!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+                                             </a>
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </div>
+                                       </div>
+                                       <div class="views-field views-field-title">
+                                          <strong class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             <a href="/lenslet/may-day-central-park?amp">May Day, Central Park</a>
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </strong>
+                                       </div>
+                                       <div class="views-field views-field-field-date">
+                                          <div class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             William James Glackens (ca. 1904)
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </div>
+                                       </div>
+                                       <!-- END OUTPUT from 'themes/custom/lenstheme/templates/misc/views-view-fields--related-works.html.twig' -->
+                                    </li>
+                                    <li>
+                                       <!-- THEME DEBUG -->
+                                       <!-- THEME HOOK: 'views_view_fields__related_works' -->
+                                       <!-- FILE NAME SUGGESTIONS:
+                                          x views-view-fields--related-works.html.twig
+                                          x views-view-fields--related-works.html.twig
+                                          * views-view-fields.html.twig
+                                          -->
+                                       <!-- BEGIN OUTPUT from 'themes/custom/lenstheme/templates/misc/views-view-fields--related-works.html.twig' -->
+                                       <div class="views-field views-field-field-image">
+                                          <div class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             <a href="/lenslet/grand-canyon-yellowstone-wyoming?amp">
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image_formatter' -->
+                                                <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image_style' -->
+                                                <!-- BEGIN OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
+                                                <!-- THEME DEBUG -->
+                                                <!-- THEME HOOK: 'image' -->
+                                                <!-- BEGIN OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
+                                                <amp-img layout="responsive" src="/sites/default/files/styles/related_works_250/public/2018-05/A311316_V1.jpg?h=bdd1ffa8&amp;itok=-VlOs3w9" width="250" height="141" alt="Thomas Moran, Grand Canyon of the Yellowstone, Wyoming, 1906" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined">
+                                                   <i-amphtml-sizer style="display: block; padding-top: 56.4%;"></i-amphtml-sizer>
+                                                </amp-img>
+                                                <!-- END OUTPUT from 'themes/contrib/amptheme/amptheme/templates/field/image.html.twig' -->
+                                                <!-- END OUTPUT from 'core/themes/stable/templates/field/image-style.html.twig' -->
+                                                <!-- END OUTPUT from 'core/themes/stable/templates/field/image-formatter.html.twig' -->
+                                             </a>
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </div>
+                                       </div>
+                                       <div class="views-field views-field-title">
+                                          <strong class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             <a href="/lenslet/grand-canyon-yellowstone-wyoming?amp">Grand Canyon of the Yellowstone, Wyoming</a>
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </strong>
+                                       </div>
+                                       <div class="views-field views-field-field-date">
+                                          <div class="field-content">
+                                             <!-- THEME DEBUG -->
+                                             <!-- THEME HOOK: 'views_view_field' -->
+                                             <!-- BEGIN OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                             Thomas Moran (1906)
+                                             <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-field.html.twig' -->
+                                          </div>
+                                       </div>
+                                       <!-- END OUTPUT from 'themes/custom/lenstheme/templates/misc/views-view-fields--related-works.html.twig' -->
+                                    </li>
                                  </ul>
                               </div>
                               <!-- END OUTPUT from 'core/themes/stable/templates/views/views-view-list.html.twig' -->
@@ -1103,10 +1521,6 @@
          }
       </script>
    </amp-analytics>
-   <img src="http://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/logos/Zillowlogo_200x50.gif" width="200" height="50" alt="Zillow Real Estate Search" id="yui_3_18_1_1_1533319140859_355" class="center-image">
-   <div class="copyright-info">
-      <p>© Zillow, Inc., 2006-2016. Use is subject to <a href="/corp/Terms.htm">Terms of Use</a><br><a href="/wikipages/What-is-a-Zestimate/">What's a Zestimate?</a></p>
-   </div>
    <!-- END OUTPUT from 'modules/contrib/amp/templates/amp-analytics.html.twig' -->
    <!-- END OUTPUT from 'themes/custom/lenstheme/templates/layout/html.html.twig' -->
 </body>
