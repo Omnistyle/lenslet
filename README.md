@@ -54,7 +54,20 @@ req.send();
 
 ## Running Locally
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
+Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed. 
+
+The below has been tested with Node v10.7.0 and NPM v6.2.0. You can check your current version by running:
+```sh
+$ node --version
+$ npm --version
+```
+
+You can also update them by running, found at [SO](https://stackoverflow.com/questions/11284634/upgrade-node-js-to-the-latest-version-on-mac-os):
+```sh
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+```
 
 ```sh
 $ git clone https://github.com/Omnistyle/lenslet.git # or clone your own fork
