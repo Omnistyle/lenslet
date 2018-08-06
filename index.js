@@ -58,7 +58,9 @@ app.get('/api/:endpoint', async (req, res) => {
 	}
 	// Otherwise, forward the requqest and parameters to zillow library.
 	const results = await zillow.get(req.params.endpoint, req.query);
-	return res.json(results);
+	return res.json({
+		urls: results,
+	});
 });
 
 // Setup a lenslet/schema endpoints that returns the schema.
