@@ -58,15 +58,14 @@ app.get('/api/:endpoint', async (req, res) => {
 	}
 	// Otherwise, forward the requqest and parameters to zillow library.
 	const results = await zillow.get(req.params.endpoint, req.query);
-	return res.json({
-		urls: results,
-	});
+	return res.json(results);
 });
 
 // Setup a lenslet/schema endpoints that returns the schema.
 app.get('/lenslet/schema', (req, res) => {
 	const fullUrl = req.protocol + '://' + req.get('host');
-	return res.json(linkData.map(it => {
+	return res.json({
+		urls: linkData.map(it => {
 		const params = {
 			'addreszps': it.address,
 			'citystatezip': it.citystatezip,
@@ -76,7 +75,7 @@ app.get('/lenslet/schema', (req, res) => {
     	return encodeURIComponent(k) + '=' + encodeURIComponent(params[k])
 		}).join('&');
 		return fullUrl + '/lenslet?' + encodedParams;
-	}));
+	})});
 });
 
 // Setup routes to actually render the lenslet.
