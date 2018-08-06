@@ -3,7 +3,7 @@ const availableEndpoints = require('./lib/api-list');
 const fs = require('fs');
 
 const BATCH_SIZE = 100;
-const NUM_RESULTS = 100;
+const NUM_RESULTS = 200;
 const OUTPUT_FILE = "url-list.json"
 const MAX_ZPID = 1000000 * BATCH_SIZE
 
