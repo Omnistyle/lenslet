@@ -64,24 +64,17 @@
            "@vocab": "http://schema.org",
            "g": "http://developers.google.com/lens"
          },
+         
          "@type": "ARArtifact",
          "anchor": {
-           "@type": "ARCompositeAnchor",
-           "anchor": {
-             "@type": "ARMarker",
-             "markerValue": "<%= imageUrls[0] %>",
-             "markerType": "image"
-           },
-           "nearby": {
-             "@type": "Place",
-             "address": {
+           "@type": "Place",
+           "address": {
                "@type": "PostalAddress",
                "addressLocality": "<%= address.city %>",
                "addressRegion": "<%= address.state %>",
                "postalCode": "<%= address.zipcode %>",
                "streetAddress": "<%= address.street %>"
              }
-           }
          },
          "asset": {
            "@type": "WebPage",
