@@ -68,13 +68,12 @@
          "@type": "ARArtifact",
          "anchor": {
            "@type": "Place",
-           "address": {
-               "@type": "PostalAddress",
-               "addressLocality": "<%= address.city %>",
-               "addressRegion": "<%= address.state %>",
-               "postalCode": "<%= address.zipcode %>",
-               "streetAddress": "<%= address.street %>"
-             }
+           "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "<%= address.latitude %>",
+              "longitude": "<%= address.longitude %>"
+           }
+           "address": "<%= address.street %>, <%= address.city %> <%= address.state %> <%= address.zipcode %>"
          },
          "asset": {
            "@type": "WebPage",
